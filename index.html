@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+
+    <!-- Meta tag to access responsive media queries: -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Link to Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+
+    <!-- External CSS stylesheet -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Webpage title -->
+    <title>Hot Mess Express</title>
+</head>
+<body>
+
+    <!-- HEADER STARTS -->
+    <header>
+        <h1>Hot Mess Express</h1>
+        <h2>Some catchy tagline</h2>
+        <div class="instructions">
+            <p>How to play: On a scale of 1 to 5, pick a hangover level that best reflects how you're feeling. Click the "Help me" button, and Hot Mess Express will then give you some advice on how to deal with your hangover.</p>
+            <p>Refer to our handy guide to determine which hangover level you're at.</p>
+            <p>*Disclaimer: Tried and tested methods by Victoria Chan. Quality of life not guaranteed.</p>
+        </div>
+    </header>
+    <!-- HEADER ENDS -->
+
+    <!-- MAIN SECTION STARTS -->
+    <main>
+
+        <!-- SECTION 1: QUESTION STARTS -->
+        <section class="question">
+            <form class="questionOptions">
+                <h2>On a scale of 1 to 5, how wild were you last night?</h2>
+                <!-- Level 1 starts -->
+                <div class="option">
+                    <i class="far fa-grimace"></i>
+                    <label for="option1">Level 1 Hangover: The Pardon</label>
+                    <input type="radio" id="option1" name="option" value="hangover1">
+                </div>
+                <!-- Level 1 ends -->
+
+                <!-- Level 2 starts -->
+                <div class="option">
+                    <i class="far fa-frown"></i>
+                    <label for="option2">Level 2 Hangover: Wine Flu</label>
+                    <input type="radio" id="option2" name="option" value="hangover2">
+                </div>
+                <!-- Level 2 ends -->
+
+                <!-- Level 3 starts -->
+                <div class="option">
+                    <i class="far fa-flushed"></i>
+                    <label for="option3">Level 3 Hangover: The Shame Spiral</label>
+                    <input type="radio" id="option3" name="option" value="hangover3">
+                </div>
+                <!-- Level 3 ends -->
+
+                <!-- Level 4 starts -->
+                <div class="option">
+                    <i class="far fa-tired"></i>
+                    <label for="option4">Level 4 Hangover: The Edge of Death</label>
+                    <input type="radio" id="option4" name="option" value="hangover4">
+                </div>
+                <!-- Level 4 ends -->
+
+                <!-- Level 5 starts -->
+                <div class="option">
+                    <i class="far fa-dizzy"></i>
+                    <label for="option5">Level 5 Hangover: Hot Mess Express</label>
+                    <input type="radio" id="option5" name="option" value="hangover5">
+                </div>
+                <!-- Level 5 ends -->
+            </div>
+            <label for="submit">Help me</label>
+            <input type="submit" id="submit" name="submit" value="Help me">
+        </section>
+        <!-- SECTION 1: QUESTION ENDS -->
+
+
+        <!-- SECTION 2: RESULTS STARTS -->
+        <section class="resultsContainer">
+            <h2>Here's some advice for you...</h2>
+            <div class="results">
+                <div class="titleResult">
+                    
+                </div>
+                <div class="textResult">
+
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 2: RESULTS ENDS -->
+
+    </main>
+    <!-- MAIN SECTION ENDS -->
+
+    <!-- FOOTER STARTS -->
+    <footer>
+        <p>Some kind of thank you, context...</p>
+    </footer>
+    <!-- FOOTER ENDS -->
+
+    <!-- jQuery-->
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+
+    <!-- External JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
