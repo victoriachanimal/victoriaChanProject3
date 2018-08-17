@@ -1,0 +1,105 @@
+// RESPONSIVE (MEDIA QUERY) STYLES
+
+/* Portrait Tablet and Small Desktops */
+@media (max-width: 940px) {
+}
+
+/* Landscape Phone to Portrait Tablet */
+@media (max-width: 767px) {
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    header {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        text-align: center;
+        min-height: 20vh;
+
+        .headingBackground {
+            background-color: #F5F5F5;
+            padding: 20px 0;
+        }
+
+        .logoWrapper {
+            position: relative;
+            min-height: 35vh;
+            max-height: 40vh;
+        }
+
+        #hotMessLogo {
+            width: 120px;
+            height: 120px;
+            text-align: center;
+        }
+
+        h1 {
+           position: absolute;
+           z-index: 20;
+           left: 0;
+           right: 0;
+           top: 60px;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        .play {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .boozeIcons {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        .fa-glass-martini-alt,
+        .fa-beer,
+        .fa-wine-glass-alt {
+            font-size: 20px;
+        }
+
+        .fa-glass-martini-alt,
+        .fa-beer {
+           color: lightgray;
+        }
+
+        .fa-wine-glass-alt {
+            color: pink;
+        }
+
+        #vomitIcon {
+            width: 55px;
+            height: 55px;
+            margin: 20px 0;
+        }
+
+        .instructionsBtn,
+        .playBtn {
+            margin: 12.5px 0;
+        }
+
+        .instructionsBtn {
+            color: hotpink;
+            background: #FFDAB9;
+            border: 1px solid #FFDAB9;
+            box-shadow: -1px 1px 0px pink, -2px 2px 0px pink, -3px 3px 0px pink, -4px 4px 0px pink, -5px 5px 0px pink, -6px 6px 0px pink, -7px 7px 0px pink, -8px 8px 0px pink, -9px 9px 0px pink, -10px 10px 0px pink, 0px 0px 10px rgba(0,0,0,0.4);
+        }
+
+        .playBtn {
+            color: #FFDAB9;
+            background: hotpink;
+            border: 1px solid hotpink;
+            box-shadow: -1px 1px 0px deeppink, -2px 2px 0px deeppink, -3px 3px 0px deeppink, -4px 4px 0px deeppink, -5px 5px 0px deeppink, -6px 6px 0px deeppink, -7px 7px 0px deeppink, -8px 8px 0px deeppink, -9px 9px 0px deeppink, -10px 10px 0px deeppink, 0px 0px 10px rgba(0,0,0,0.4);
+        }
+    }
+}

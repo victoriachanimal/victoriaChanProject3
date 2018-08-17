@@ -1,0 +1,55 @@
+// GLOBAL STYLES
+// variables
+// $primaryColor: #1d1d1d;
+// $secondaryColor: #f1f3f3;
+// $thirdColor: #5d5e5d;
+// $fourthColor: #8ecceb;
+// $accentColor: #0e5f88;
+
+// mixins
+@mixin primaryFont($fontSize) {
+    font-size: $fontSize * 1px;
+    font-size: ($fontSize / 10) * 1rem;
+    font-family: 'Bungee Shade', cursive;
+} 
+
+@mixin secondaryFont($fontSize) {
+    font-size: $fontSize * 1px;
+    font-size: ($fontSize / 10) * 1rem;
+    font-family: 'Open Sans', sans-serif;
+    // font-family: arial;
+}
+
+// general styles
+.wrapper {
+    max-width: 1280px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+button {
+    @include secondaryFont(12);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    width: 35%;
+}
+
+// typography
+html {
+    font-size: 62.5%;
+    
+}
+
+h1 {
+    @include primaryFont(45);
+}
+
+h2 {
+    @include secondaryFont(15);
+    font-weight: 400;
+}
+
+
+
+
