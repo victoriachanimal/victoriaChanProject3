@@ -6,100 +6,241 @@
 
 /* Landscape Phone to Portrait Tablet */
 @media (max-width: 767px) {
+    
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+
+}
+
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    // Header Styles
     header {
         position: fixed;
         top: 0;
-        bottom: 0;
         right: 0;
         left: 0;
-        text-align: center;
-        min-height: 20vh;
 
-        .headingBackground {
-            background-color: #F5F5F5;
-            padding: 20px 0;
+        .logoBackground {
+            padding: 10px 0;
+            height: 180px;
         }
 
-        .logoWrapper {
-            position: relative;
-            min-height: 35vh;
-            max-height: 40vh;
+        .headerLogo {
+            flex-direction: column;
+            align-items: center;
         }
 
         #hotMessLogo {
-            width: 120px;
-            height: 120px;
-            text-align: center;
+           width: 100px;
+           height: 100px;
+           top: 8px;
+           margin-left: 20px;
         }
 
         h1 {
-           position: absolute;
-           z-index: 20;
-           left: 0;
-           right: 0;
-           top: 60px;
+            @include primaryFont(35);
         }
+    }
+    // end of Header Styles
+
+    // Homepage Styles
+    body .homePage {
+        height: 85vh;
+        position: relative;
+        margin-top: 0;
+        padding-top: 20px;
+        top: 180px;
+        left: 0;
+        right: 0;
+        border-top: 2px solid black;
+
+        .instructionsContainer {
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+        .instructions {
+            width: 100%;
+            margin: 0;
+        }
+
+        .instructionsTitle {
+            justify-content: center;
+        }
+
+        .instructionsText {
+            margin-bottom: 20px;
+
+            p {
+                @include secondaryFont(12);
+            }
+        }
+
+        #disclaimer {
+            @include secondaryFont(10);
+            font-style: italic;
+            margin-top: 25px;
+        }
+
+        #vomitIcon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .headerBtns {
+            width: 100%;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        #gameBtn1 {
+            display: none;
+        }
+
+        #gameBtn2 {
+            display: block;
+        }
+
+        #guideBtn,
+        #gameBtn2 {
+            height: 60px;
+        }
+    }
+    // end of Homepage styles
+
+    // Gamepage styles
+    .gamePage {
+        position: relative;
+        display: none;
+        z-index: 100;
+        top: 135px;
+        left: 0;
+        right: 0; 
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
 
         h2 {
+            @include secondaryFont(12);
+            margin: 0 auto;
+            width: 80%;
             margin-top: 20px;
+            margin-bottom: 3.5px;
+            text-align: center;
         }
 
-        .play {
-            margin-top: 10px;
+        .optionsContainer {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
         }
 
-        .boozeIcons {
+        .option {
             display: flex;
-            width: 100%;
-            justify-content: space-around;
-        }
-
-        .fa-glass-martini-alt,
-        .fa-beer,
-        .fa-wine-glass-alt {
-            font-size: 20px;
-        }
-
-        .fa-glass-martini-alt,
-        .fa-beer {
-           color: lightgray;
-        }
-
-        .fa-wine-glass-alt {
-            color: pink;
-        }
-
-        #vomitIcon {
-            width: 55px;
-            height: 55px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: calc(50%);
             margin: 20px 0;
         }
 
-        .instructionsBtn,
-        .playBtn {
-            margin: 12.5px 0;
-        }
-
-        .instructionsBtn {
-            color: hotpink;
-            background: #FFDAB9;
-            border: 1px solid #FFDAB9;
-            box-shadow: -1px 1px 0px pink, -2px 2px 0px pink, -3px 3px 0px pink, -4px 4px 0px pink, -5px 5px 0px pink, -6px 6px 0px pink, -7px 7px 0px pink, -8px 8px 0px pink, -9px 9px 0px pink, -10px 10px 0px pink, 0px 0px 10px rgba(0,0,0,0.4);
-        }
-
-        .playBtn {
+        input[type=submit] {
+            font-weight: 600;
+            text-transform: uppercase;
+            width: 35%;
+            margin-top: 18px;
+            margin-left: 15%;
+            padding: 25px 0;
             color: #FFDAB9;
+            position: relative;
+	        top: 0;
+            left: 0;
+            transition: all 1s;
             background: hotpink;
             border: 1px solid hotpink;
             box-shadow: -1px 1px 0px deeppink, -2px 2px 0px deeppink, -3px 3px 0px deeppink, -4px 4px 0px deeppink, -5px 5px 0px deeppink, -6px 6px 0px deeppink, -7px 7px 0px deeppink, -8px 8px 0px deeppink, -9px 9px 0px deeppink, -10px 10px 0px deeppink, 0px 0px 10px rgba(0,0,0,0.4);
+
+            &:hover {
+                box-shadow: -1px 1px 0px darken(deeppink, 10), -2px 2px 0px darken(deeppink, 10), -3px 3px 0px darken(deeppink, 10), -4px 4px 0px darken(deeppink, 10), -5px 5px 0px darken(deeppink, 10), -6px 6px 0px darken(deeppink, 10), -7px 7px 0px darken(deeppink, 10), -8px 8px 0px darken(deeppink, 10), -5px 5px 0px darken(pink, 10), -5px 5px 0px darken(deeppink, 10), 0px 0px 10px rgba(0,0,0,0.4);
+                top: 5px;
+                background: darken($primaryColor, 10);
+                border: 1px solid darken($primaryColor, 10);
+            }
+        }
+
+        p {
+            @include secondaryFont(11.5);
+            text-align: center;
+            font-weight: 600;
+            margin: 8px 0;
+        }
+
+        input[type="radio"] {
+            opacity: 0;
+        }
+
+        input[type="radio"]:checked + .icon:after {
+            color: black;
+        }
+
+        label {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            font-family: sans-serif;
+            font-size: 15px;
+            user-select: none;
+
+            &:hover .icon:after {
+                color: black;
+                transition: all 1s;
+            }
+        } 
+
+        .icon:after {
+            font-family: 'Font Awesome\ 5 Free';
+            font-weight: 900;
+            font-size: 30px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            color: pink;
+        }
+
+        .icon1:after {
+            content: "\f57f"; 
+        }
+
+        .icon2:after {
+            content: "\f119";
+        }
+
+        .icon3:after {
+            content: "\f579";
+        }
+
+        .icon4:after {
+            content: "\f5c8";
+        }
+
+        .icon5:after {
+            content: "\f567";
+        }
+
+        .resultsContainer {
+            margin: 45px auto;
+            text-align: center;
+
+            h3 {
+                @include primaryFont(25);
+            }
         }
     }
 }
+

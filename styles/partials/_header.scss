@@ -1,0 +1,38 @@
+// HEADER STYLES
+header {
+    height: 40vh;
+}
+
+.logoBackground {
+    background: linear-gradient( $accentColor, $primaryColor);
+    padding: 20px 0;
+    height: 260px;
+}
+
+.headerLogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+#hotMessLogo {
+    width: 145px;
+    height: 145px;
+    position: absolute;
+    top: 15px;
+}
+
+h1 {
+    text-align: left;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+
+    .break {
+        display: table;
+    }
+}
+// END OF HEADER STYLES
+
+

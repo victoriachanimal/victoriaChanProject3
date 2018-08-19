@@ -1,10 +1,10 @@
 // GLOBAL STYLES
 // variables
-// $primaryColor: #1d1d1d;
-// $secondaryColor: #f1f3f3;
-// $thirdColor: #5d5e5d;
-// $fourthColor: #8ecceb;
-// $accentColor: #0e5f88;
+$primaryColor: #FF69B4;
+$secondaryColor: #F5F5F5;
+$thirdColor: pink;
+$fourthColor: #FFDAB9;
+$accentColor: deeppink;
 
 // mixins
 @mixin primaryFont($fontSize) {
@@ -35,10 +35,24 @@ button {
     width: 35%;
 }
 
+.instructionsText {
+    p {
+        @include secondaryFont(13.5);
+        line-height: 1.5;
+        text-align: left;
+        font-weight: 400;
+    }
+}
+
+.homePage,
+.gamePage {
+    background: linear-gradient(white, $secondaryColor);
+    border-top: 1px solid black;
+}
+
 // typography
 html {
     font-size: 62.5%;
-    
 }
 
 h1 {
@@ -50,6 +64,12 @@ h2 {
     font-weight: 400;
 }
 
+h3 {
+    @include primaryFont(25);
+}
 
+.highlight {
+    font-weight: 600;
+}
 
 

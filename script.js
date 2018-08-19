@@ -166,21 +166,36 @@ const randomResult = (array) => {
     return array[randomAdvice];
 }
 
+hangoverApp.startWideScreen = function() {
+    $('#gameBtn1').on('click', function(event) {
+        // Prevent default
+        event.preventDefault();
+
+        // Scroll down to see result
+        $('html, body').animate({
+            scrollTop: $("#gamePage").offset().top
+        }, 2000);
+    });
+};
+
 
 // Put submit event listener in the hangoverApp object
 hangoverApp.submitChoice = function() {
     // When the form submits (event listener)...
-    $('form').on('submit', function (event) {
+    $('.form').on('submit', function (event) {
 
         // Prevent default
         event.preventDefault();
 
+        // Scroll down to see result
+        $('html, body').animate({
+                scrollTop: $("#results").offset().top
+            }, 2000);
+      
         // Get value of user choice and store in variable - which hangover level did they choose? 
         const userHangoverChoice = $('input[name=option]:checked').val();
 
-
         const hangoverAdvice = hangoverLevels[userHangoverChoice];
-
 
         // Create title variable 
         const hangoverResult = randomResult(hangoverAdvice);
@@ -188,8 +203,8 @@ hangoverApp.submitChoice = function() {
         console.log(hangoverResult.title);
 
         // Create an advice variable
-
         console.log(hangoverResult.text);
+
 
         // Put hangover advice on page
         // Make sure that once the user selects and submits their choice, that the next hangover advice REPLACES the previous one (ie empty?)
@@ -205,10 +220,51 @@ hangoverApp.submitChoice = function() {
     // End of form submit (event listener)
 };
 
+// Show and Hide homePage, gamePage, guidePage
+// Navigating through pages like an app 
+// Homepage (title page)
+// How to play (slide in)
+// Actual game page 
+
+const homePage = document.getElementsByClassName('homePage');
+
+const gamePage = document.getElementsByClassName('gamePage');
+
+const guidePage = document.getElementsByClassName('guidePage');
+
+// 1. When one clicks on guideBtn, show guidePage but hide homePage and gamePage
+hangoverApp.pages = function() {
+    
+    $('#guideBtn').on('click', function() {
+        $('.homePage').hide();
+    });
+
+    $('#gameBtn2').on('click', function() {
+        $('.homePage').hide();
+        $('.guidePage').hide();
+        $('.gamePage').show();
+        // stylr original 0 opacity - show with 1
+        // $('.gamePage').css('opacity', '1');
+        // $('.gamePage').addClass('show');
+    });
+
+};
+
+// 2.When one clicks on gameBtn, show gamePage but hide homePage and guidePage
+
+
+// 3. When one clicks on homeBtn, show homePage but hide gamePage and guidePage
+
+
+
 
 // Create an init method on the hangoverApp object, to be called inside the Doc Ready below
 hangoverApp.init = function(){
+    hangoverApp.startWideScreen();
+
     hangoverApp.submitChoice();
+
+    hangoverApp.pages();
 };
 
 
