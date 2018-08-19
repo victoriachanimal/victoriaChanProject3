@@ -178,11 +178,10 @@ hangoverApp.startWideScreen = function() {
     });
 };
 
-
 // Put submit event listener in the hangoverApp object
 hangoverApp.submitChoice = function() {
     // When the form submits (event listener)...
-    $('.form').on('submit', function (event) {
+    $('form').on('submit', function (event) {
 
         // Prevent default
         event.preventDefault();

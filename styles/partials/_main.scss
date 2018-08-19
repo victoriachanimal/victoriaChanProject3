@@ -2,8 +2,9 @@
 
 // Home Page styles
 .homePage {
+    background: linear-gradient(white, $secondaryColor);
     border-top: none;
-    height: 70vh;
+    height: 60vh;
     margin-top: 5px;
     padding-top: 40px;
     border-top: 2px solid black;
@@ -106,53 +107,77 @@ h3 {
         border: 1px solid darken($primaryColor, 10);
     }
 }
+
+#stars {
+    width: 125px;
+    height: 125px;
+    position: absolute;
+    right: 35px;
+    bottom: -25px;
+}
+
+
 // end of Home Page
 
 
 // Game Page
 .gamePage {
-    height: 70vh;
+    background: linear-gradient($secondaryColor, white);
+    min-height: 90vh;
+    padding-bottom: 1px;
 }
 
 h2 {
+    @include primaryFont(22.5);
+    margin-top: 60px;
+}
+
+.gamePage h3 {
     @include secondaryFont(15);
-    font-weight: 600;
-    margin: 0 auto;
-    width: 80%;
-    margin-top: 20px;
-    margin-bottom: 3.5px;
-    text-align: center;
+    font-weight: 400;
+}
+
+.questionForm {
+    display: flex;
+    flex-direction: row;
 }
 
 .optionsContainer {
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 60%;
     justify-content: center;
-    align-items: cetner;
-    width: 80%;
+    align-items: center;
 }
 
 .option {
+    width: calc(50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: calc(33% - 20px);
-    margin: 25px auto;
+    margin: 20px 0;
+    text-align: center;
 }
 
-.option4,
-.option5 {
-    width: 20%;
+.submitForm {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#vomitBag {
+    width: 50px;
+    height: 50px;
 }
 
 input[type=submit] {
     @include secondaryFont(12);
     font-weight: 600;
     text-transform: uppercase;
-    width: 30%;
+    width: 60%;
     margin: 25px;
     padding: 25px 0;
     color: #FFDAB9;
@@ -172,74 +197,83 @@ input[type=submit] {
     }
 }
 
-        p {
-            @include secondaryFont(11.5);
-            text-align: center;
-            font-weight: 600;
-            margin: 8px 0;
-        }
+.gamePage p {
+    @include secondaryFont(11.5);
+    text-align: center;
+    font-weight: 600;
+    margin: 8px 0;
+}
 
-        input[type="radio"] {
-            opacity: 0;
-        }
+input[type="radio"] {
+    opacity: 0;
+}
 
-        input[type="radio"]:checked + .icon:after {
-            color: black;
-        }
+input[type="radio"]:checked + .icon:after {
+    color: black;
+}
 
-        label {
-            display: inline-block;
-            position: relative;
-            cursor: pointer;
-            font-family: sans-serif;
-            font-size: 15px;
-            user-select: none;
+label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 15px;
+    user-select: none;
 
-            &:hover .icon:after {
-                color: black;
-                transition: all 1s;
-            }
-        } 
+    &:hover .icon:after {
+        color: black;
+        transition: all 1s;
+    }
+} 
 
-        .icon:after {
-            font-family: 'Font Awesome\ 5 Free';
-            font-weight: 900;
-            font-size: 30px;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            color: pink;
-        }
+.icon:after {
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    font-size: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    color: pink;
+}
 
-        .icon1:after {
-            content: "\f57f"; 
-        }
+.icon1:after {
+    content: "\f57f"; 
+}
 
-        .icon2:after {
-            content: "\f119";
-        }
+.icon2:after {
+    content: "\f119";
+}
 
-        .icon3:after {
-            content: "\f579";
-        }
+.icon3:after {
+    content: "\f579";
+}
 
-        .icon4:after {
-            content: "\f5c8";
-        }
+.icon4:after {
+    content: "\f5c8";
+}
 
-        .icon5:after {
-            content: "\f567";
-        }
+.icon5:after {
+    content: "\f567";
+}
 
-        .resultsContainer {
-            margin: 45px auto;
-            text-align: center;
+.resultsContainer {
+    padding: 45px 0 50px 0;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
 
-            h3 {
-                @include primaryFont(25);
-            }
-        }
+    h3 {
+        @include primaryFont(28);
+    }
+
+    p {
+        @include secondaryFont(13.5);
+        font-weight: 400;
+        line-height: 1.5;
+    }
+}
     
-
 // end of Game Page
+
+

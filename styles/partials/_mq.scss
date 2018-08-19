@@ -2,16 +2,81 @@
 
 /* Portrait Tablet and Small Desktops */
 @media (max-width: 940px) {
+
+}
+
+@media (max-width: 480px) {
+    footer {
+        display: none;
+    }
 }
 
 /* Landscape Phone to Portrait Tablet */
-@media (max-width: 767px) {
-    
-}
+@media (max-width: 760px) {
 
-/* Landscape phones and down */
-@media (max-width: 480px) {
+    // Home Page styles
+    .homePage {
+        height: 70vh;
 
+        .instructionsContainer {
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+        .instructions {
+            width: 100%;
+            margin: 0;
+        }
+
+        .instructionsTitle {
+            justify-content: center;
+        }
+
+        .headerBtns {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 65%;
+            align-items: center;
+            margin-top: 5px;
+            margin: 0 auto;
+            
+        }
+    }
+    // end of Home Page styles
+
+    // Game Page styles
+    .gamePage {
+        .questionForm {
+            flex-direction: column;
+        }
+
+        h2, h3 {
+            text-align: center;
+        }
+
+        .optionsContainer {
+            width: 100%;
+        }
+
+        .option {
+            width: 33%;
+            margin: 28.5px 0;
+        }
+
+        .submitForm {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            margin: 25px auto;
+        }
+
+        #vomitBag {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    // end of Game Page styles
 }
 
 
@@ -56,21 +121,6 @@
         top: 180px;
         left: 0;
         right: 0;
-        border-top: 2px solid black;
-
-        .instructionsContainer {
-            flex-direction: column;
-            flex-wrap: nowrap;
-        }
-
-        .instructions {
-            width: 100%;
-            margin: 0;
-        }
-
-        .instructionsTitle {
-            justify-content: center;
-        }
 
         .instructionsText {
             margin-bottom: 20px;
@@ -93,8 +143,6 @@
 
         .headerBtns {
             width: 100%;
-            align-items: center;
-            margin-top: 5px;
         }
 
         #gameBtn1 {
@@ -115,79 +163,38 @@
     // Gamepage styles
     .gamePage {
         position: relative;
+        height: 85vh;
         display: none;
-        z-index: 100;
-        top: 135px;
+        // z-index: 100;
+        top: 180px;
         left: 0;
         right: 0; 
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
 
-        h2 {
-            @include secondaryFont(12);
-            margin: 0 auto;
-            width: 80%;
-            margin-top: 20px;
-            margin-bottom: 3.5px;
-            text-align: center;
-        }
-
         .optionsContainer {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
+           width: 100%;
         }
 
         .option {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             width: calc(50%);
             margin: 20px 0;
         }
 
         input[type=submit] {
-            font-weight: 600;
-            text-transform: uppercase;
-            width: 35%;
+            width: 50%;
             margin-top: 18px;
             margin-left: 15%;
-            padding: 25px 0;
-            color: #FFDAB9;
-            position: relative;
-	        top: 0;
-            left: 0;
-            transition: all 1s;
-            background: hotpink;
-            border: 1px solid hotpink;
-            box-shadow: -1px 1px 0px deeppink, -2px 2px 0px deeppink, -3px 3px 0px deeppink, -4px 4px 0px deeppink, -5px 5px 0px deeppink, -6px 6px 0px deeppink, -7px 7px 0px deeppink, -8px 8px 0px deeppink, -9px 9px 0px deeppink, -10px 10px 0px deeppink, 0px 0px 10px rgba(0,0,0,0.4);
-
-            &:hover {
-                box-shadow: -1px 1px 0px darken(deeppink, 10), -2px 2px 0px darken(deeppink, 10), -3px 3px 0px darken(deeppink, 10), -4px 4px 0px darken(deeppink, 10), -5px 5px 0px darken(deeppink, 10), -6px 6px 0px darken(deeppink, 10), -7px 7px 0px darken(deeppink, 10), -8px 8px 0px darken(deeppink, 10), -5px 5px 0px darken(pink, 10), -5px 5px 0px darken(deeppink, 10), 0px 0px 10px rgba(0,0,0,0.4);
-                top: 5px;
-                background: darken($primaryColor, 10);
-                border: 1px solid darken($primaryColor, 10);
-            }
         }
 
         p {
-            @include secondaryFont(11.5);
+            @include secondaryFont(12.5);
             text-align: center;
             font-weight: 600;
             margin: 8px 0;
         }
 
-        input[type="radio"] {
-            opacity: 0;
-        }
-
-        input[type="radio"]:checked + .icon:after {
-            color: black;
-        }
-
+      
         label {
             display: inline-block;
             position: relative;
@@ -203,34 +210,7 @@
         } 
 
         .icon:after {
-            font-family: 'Font Awesome\ 5 Free';
-            font-weight: 900;
             font-size: 30px;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            color: pink;
-        }
-
-        .icon1:after {
-            content: "\f57f"; 
-        }
-
-        .icon2:after {
-            content: "\f119";
-        }
-
-        .icon3:after {
-            content: "\f579";
-        }
-
-        .icon4:after {
-            content: "\f5c8";
-        }
-
-        .icon5:after {
-            content: "\f567";
         }
 
         .resultsContainer {
