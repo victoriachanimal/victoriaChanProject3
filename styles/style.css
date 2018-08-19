@@ -154,19 +154,16 @@ button {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.5px;
-  width: 35%; }
-
-.instructionsText p {
-  font-size: 13.5px;
-  font-size: 1.35rem;
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.5;
-  text-align: left;
-  font-weight: 400; }
-
-.homePage,
-.gamePage {
-  border-top: 2px solid black; }
+  width: 50%;
+  height: 80px;
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s; }
+  button:hover {
+    top: 5px; }
 
 html {
   font-size: 62.5%; }
@@ -177,15 +174,13 @@ h1 {
   font-family: 'Bungee Shade', cursive; }
 
 h2 {
-  font-size: 15px;
-  font-size: 1.5rem;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400; }
-
-h3 {
   font-size: 25px;
   font-size: 2.5rem;
-  font-family: 'Bungee Shade', cursive; }
+  font-family: 'Bungee Shade', cursive;
+  font-weight: 400; }
+
+.break {
+  display: table; }
 
 .highlight {
   font-weight: 600; }
@@ -194,12 +189,12 @@ header {
   height: 40vh; }
 
 .logoBackground {
+  height: 260px;
   background: -webkit-gradient(linear, left top, left bottom, from(deeppink), to(#FF69B4));
   background: -webkit-linear-gradient(deeppink, #FF69B4);
   background: -o-linear-gradient(deeppink, #FF69B4);
   background: linear-gradient(deeppink, #FF69B4);
-  padding: 20px 0;
-  height: 260px; }
+  padding: 20px 0; }
 
 .headerLogo {
   display: -webkit-box;
@@ -225,19 +220,16 @@ h1 {
   position: absolute;
   z-index: 10;
   top: 0; }
-  h1 .break {
-    display: table; }
 
 .homePage {
+  height: 60vh;
   background: -webkit-gradient(linear, left top, left bottom, from(white), to(#F5F5F5));
   background: -webkit-linear-gradient(white, #F5F5F5);
   background: -o-linear-gradient(white, #F5F5F5);
   background: linear-gradient(white, #F5F5F5);
-  border-top: none;
-  height: 60vh;
+  border-top: 2px solid black;
   margin-top: 5px;
-  padding-top: 40px;
-  border-top: 2px solid black; }
+  padding-top: 40px; }
 
 .instructionsContainer {
   display: -webkit-box;
@@ -272,23 +264,28 @@ h1 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-
-h3 {
-  padding-right: 10px;
-  padding-top: 5px; }
-  h3 .break {
-    display: table; }
-
-#disclaimer {
-  font-weight: 400;
-  font-style: italic; }
+  .instructionsTitle h2 {
+    padding-right: 10px;
+    padding-top: 5px; }
 
 #vomitIcon {
   width: 65px;
   height: 65px;
   margin: 10px 0 5px 0; }
 
-.headerBtns {
+.instructionsText p {
+  font-size: 13.5px;
+  font-size: 1.35rem;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  text-align: left;
+  font-weight: 400; }
+
+#disclaimer {
+  font-weight: 400;
+  font-style: italic; }
+
+.homeBtns {
   width: calc(50% - 25px);
   margin-top: 35px;
   display: -webkit-box;
@@ -307,24 +304,13 @@ h3 {
 
 #guideBtn,
 .gameBtns {
-  width: 50%;
-  height: 80px;
   margin: 12.5px;
   position: relative;
   top: 0;
-  left: 0;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s; }
+  left: 0; }
 
 #gameBtn2 {
   display: none; }
-
-#guideBtn:active,
-.gameBtns {
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s; }
 
 #guideBtn {
   color: deeppink;
@@ -341,8 +327,8 @@ h3 {
 
 .gameBtns {
   color: #FFDAB9;
-  background: hotpink;
-  border: 1px solid hotpink;
+  background: #FF69B4;
+  border: 1px solid #FF69B4;
   -webkit-box-shadow: -1px 1px 0px deeppink, -2px 2px 0px deeppink, -3px 3px 0px deeppink, -4px 4px 0px deeppink, -5px 5px 0px deeppink, -6px 6px 0px deeppink, -7px 7px 0px deeppink, -8px 8px 0px deeppink, -9px 9px 0px deeppink, -10px 10px 0px deeppink, 0px 0px 10px rgba(0, 0, 0, 0.4);
   box-shadow: -1px 1px 0px deeppink, -2px 2px 0px deeppink, -3px 3px 0px deeppink, -4px 4px 0px deeppink, -5px 5px 0px deeppink, -6px 6px 0px deeppink, -7px 7px 0px deeppink, -8px 8px 0px deeppink, -9px 9px 0px deeppink, -10px 10px 0px deeppink, 0px 0px 10px rgba(0, 0, 0, 0.4); }
   .gameBtns:hover {
@@ -352,32 +338,30 @@ h3 {
     background: #ff369b;
     border: 1px solid #ff369b; }
 
-#stars {
-  width: 125px;
-  height: 125px;
-  position: absolute;
-  right: 35px;
-  bottom: -25px; }
-
 .gamePage {
   background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(white));
   background: -webkit-linear-gradient(#F5F5F5, white);
   background: -o-linear-gradient(#F5F5F5, white);
   background: linear-gradient(#F5F5F5, white);
   min-height: 90vh;
-  padding-bottom: 1px; }
-
-h2 {
-  font-size: 22.5px;
-  font-size: 2.25rem;
-  font-family: 'Bungee Shade', cursive;
-  margin-top: 60px; }
-
-.gamePage h3 {
-  font-size: 15px;
-  font-size: 1.5rem;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400; }
+  padding: 1px 0; }
+  .gamePage h2 {
+    margin-top: 60px;
+    font-size: 25px;
+    font-size: 2.5rem;
+    font-family: 'Bungee Shade', cursive; }
+  .gamePage h3 {
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400; }
+  .gamePage p {
+    font-size: 11.5px;
+    font-size: 1.15rem;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-weight: 600;
+    margin: 8px 0; }
 
 .questionForm {
   display: -webkit-box;
@@ -407,7 +391,7 @@ h2 {
   align-items: center; }
 
 .option {
-  width: calc(50%);
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,7 +425,7 @@ h2 {
   width: 50px;
   height: 50px; }
 
-input[type=submit] {
+#submit {
   font-size: 12px;
   font-size: 1.2rem;
   font-family: 'Open Sans', sans-serif;
@@ -457,41 +441,27 @@ input[type=submit] {
   -webkit-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
-  background: hotpink;
-  border: 1px solid hotpink;
+  background: #FF69B4;
+  border: 1px solid #FF69B4;
   -webkit-box-shadow: -1px 1px 0px deeppink, -2px 2px 0px deeppink, -3px 3px 0px deeppink, -4px 4px 0px deeppink, -5px 5px 0px deeppink, -6px 6px 0px deeppink, -7px 7px 0px deeppink, -8px 8px 0px deeppink, -9px 9px 0px deeppink, -10px 10px 0px deeppink, 0px 0px 10px rgba(0, 0, 0, 0.4);
   box-shadow: -1px 1px 0px deeppink, -2px 2px 0px deeppink, -3px 3px 0px deeppink, -4px 4px 0px deeppink, -5px 5px 0px deeppink, -6px 6px 0px deeppink, -7px 7px 0px deeppink, -8px 8px 0px deeppink, -9px 9px 0px deeppink, -10px 10px 0px deeppink, 0px 0px 10px rgba(0, 0, 0, 0.4); }
-  input[type=submit]:hover {
+  #submit:hover {
     -webkit-box-shadow: -1px 1px 0px #e00079, -2px 2px 0px #e00079, -3px 3px 0px #e00079, -4px 4px 0px #e00079, -5px 5px 0px #e00079, -6px 6px 0px #e00079, -7px 7px 0px #e00079, -8px 8px 0px #e00079, -5px 5px 0px #ff8da1, -5px 5px 0px #e00079, 0px 0px 10px rgba(0, 0, 0, 0.4);
     box-shadow: -1px 1px 0px #e00079, -2px 2px 0px #e00079, -3px 3px 0px #e00079, -4px 4px 0px #e00079, -5px 5px 0px #e00079, -6px 6px 0px #e00079, -7px 7px 0px #e00079, -8px 8px 0px #e00079, -5px 5px 0px #ff8da1, -5px 5px 0px #e00079, 0px 0px 10px rgba(0, 0, 0, 0.4);
     top: 5px;
     background: #ff369b;
     border: 1px solid #ff369b; }
 
-.gamePage p {
-  font-size: 11.5px;
-  font-size: 1.15rem;
-  font-family: 'Open Sans', sans-serif;
-  text-align: center;
-  font-weight: 600;
-  margin: 8px 0; }
-
 input[type="radio"] {
   opacity: 0; }
-
-input[type="radio"]:checked + .icon:after {
-  color: black; }
+  input[type="radio"]:checked + .icon:after {
+    color: black; }
 
 label {
   display: inline-block;
   position: relative;
   cursor: pointer;
-  font-family: sans-serif;
-  font-size: 15px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
+  font-size: 15px; }
   label:hover .icon:after {
     color: black;
     -webkit-transition: all 1s;
@@ -539,23 +509,138 @@ label {
     font-weight: 400;
     line-height: 1.5; }
 
+.guidePage {
+  background: white;
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 200;
+  overflow-x: hidden;
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s; }
+
+.guidePage:active {
+  left: 0; }
+
+.guideHeading {
+  border-bottom: 2px solid black;
+  padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative; }
+  .guideHeading #exitBtn {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 20px;
+    left: 90%;
+    right: 0px;
+    background: white;
+    border: 1px solid white; }
+    .guideHeading #exitBtn:hover .fa-times-circle {
+      color: #FF69B4;
+      -webkit-transition: color 0.3s;
+      -o-transition: color 0.3s;
+      transition: color 0.3s; }
+  .guideHeading .fa-times-circle {
+    font-size: 35px;
+    margin-left: -6px; }
+  .guideHeading h3 {
+    text-align: center;
+    font-size: 25px;
+    font-size: 2.5rem;
+    font-family: 'Bungee Shade', cursive;
+    margin-top: 33.5px; }
+  .guideHeading .fa-skull {
+    font-size: 25px;
+    color: black;
+    margin: 10px 0 0 15px; }
+
+.guideContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 30px; }
+  .guideContent h4 {
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center; }
+    .guideContent h4 .number {
+      font-size: 25px;
+      font-size: 2.5rem;
+      font-family: 'Bungee Shade', cursive; }
+  .guideContent p {
+    font-size: 12.5px;
+    font-size: 1.25rem;
+    font-family: 'Open Sans', sans-serif; }
+
+.level {
+  width: calc(50% - 40px);
+  margin: 10px 20px; }
+
 footer {
   position: relative;
   right: 0;
   left: 0;
   bottom: 0;
   height: 10vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF69B4), to(deeppink));
-  background: -webkit-linear-gradient(#FF69B4, deeppink);
-  background: -o-linear-gradient(#FF69B4, deeppink);
-  background: linear-gradient(#FF69B4, deeppink);
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF69B4), to(#f470b2));
+  background: -webkit-linear-gradient(#FF69B4, #f470b2);
+  background: -o-linear-gradient(#FF69B4, #f470b2);
+  background: linear-gradient(#FF69B4, #f470b2);
   padding-bottom: 1px;
   border-top: 2px solid black; }
-
-/* Portrait Tablet and Small Desktops */
-@media (max-width: 480px) {
-  footer {
-    display: none; } }
+  footer .footerText {
+    padding-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  footer p:first-child {
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-family: 'Bungee Shade', cursive; }
+  footer p:last-child {
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif; }
 
 /* Landscape Phone to Portrait Tablet */
 @media (max-width: 760px) {
@@ -575,48 +660,72 @@ footer {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; }
-    .homePage .headerBtns {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+    .homePage .homeBtns {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
       flex-direction: row;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
       width: 65%;
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
       margin-top: 5px;
       margin: 0 auto; }
-  .gamePage .questionForm {
+  .gamePage {
+    border-top: 2px solid black; }
+    .gamePage .questionForm {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    .gamePage h2, .gamePage h3 {
+      text-align: center; }
+    .gamePage .optionsContainer {
+      width: 100%; }
+    .gamePage .option {
+      width: 33%;
+      margin: 28.5px 0; }
+    .gamePage .submitForm {
+      width: 50%;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      margin: 25px auto; }
+    .gamePage #vomitBag {
+      width: 30px;
+      height: 30px; }
+  .guidePage .guideContent {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
-  .gamePage h2, .gamePage h3 {
+  .guidePage .guideHeading {
+    border-bottom: none; }
+    .guidePage .guideHeading .exitBtn {
+      width: 25px;
+      height: 25px; }
+    .guidePage .guideHeading .fa-times-circle {
+      font-size: 28px; }
+    .guidePage .guideHeading h3 {
+      width: 80%;
+      font-size: 18px;
+      font-size: 1.8rem;
+      font-family: 'Bungee Shade', cursive; }
+    .guidePage .guideHeading .fa-skull {
+      display: none; }
+  .guidePage h4 {
+    font-size: 12.5px;
+    font-size: 1.25rem;
+    font-family: 'Open Sans', sans-serif;
     text-align: center; }
-  .gamePage .optionsContainer {
-    width: 100%; }
-  .gamePage .option {
-    width: 33%;
-    margin: 28.5px 0; }
-  .gamePage .submitForm {
-    width: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    margin: 25px auto; }
-  .gamePage #vomitBag {
-    width: 30px;
-    height: 30px; } }
+    .guidePage h4 .number {
+      font-size: 20px;
+      font-size: 2rem;
+      font-family: 'Bungee Shade', cursive; }
+  .guidePage .level {
+    width: 90%;
+    margin: 0; } }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
@@ -627,7 +736,7 @@ footer {
     left: 0; }
     header .logoBackground {
       padding: 10px 0;
-      height: 180px; }
+      height: 140px; }
     header .headerLogo {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -637,92 +746,96 @@ footer {
       -ms-flex-align: center;
       align-items: center; }
     header #hotMessLogo {
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
       top: 8px;
       margin-left: 20px; }
     header h1 {
-      font-size: 35px;
-      font-size: 3.5rem;
+      font-size: 25px;
+      font-size: 2.5rem;
       font-family: 'Bungee Shade', cursive; }
-  body .homePage {
-    height: 85vh;
+  .homePage {
+    height: 100vh;
     position: relative;
-    margin-top: 0;
-    padding-top: 20px;
-    top: 180px;
+    top: 130px;
     left: 0;
-    right: 0; }
-    body .homePage .instructionsText {
+    right: 0;
+    margin-top: 0;
+    padding-top: 20px; }
+    .homePage h3 {
+      font-size: 20px;
+      font-size: 2rem;
+      font-family: 'Bungee Shade', cursive; }
+    .homePage .instructionsText {
       margin-bottom: 20px; }
-      body .homePage .instructionsText p {
+      .homePage .instructionsText p {
         font-size: 12px;
         font-size: 1.2rem;
         font-family: 'Open Sans', sans-serif; }
-    body .homePage #disclaimer {
+    .homePage #disclaimer {
       font-size: 10px;
       font-size: 1rem;
       font-family: 'Open Sans', sans-serif;
       font-style: italic;
       margin-top: 25px; }
-    body .homePage #vomitIcon {
+    .homePage #vomitIcon {
       width: 40px;
       height: 40px; }
-    body .homePage .headerBtns {
-      width: 100%; }
-    body .homePage #gameBtn1 {
+    .homePage .homeBtns {
+      width: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    .homePage #gameBtn1 {
       display: none; }
-    body .homePage #gameBtn2 {
+    .homePage #gameBtn2 {
       display: block; }
-    body .homePage #guideBtn,
-    body .homePage #gameBtn2 {
+    .homePage #guideBtn,
+    .homePage #gameBtn2 {
       height: 60px; }
   .gamePage {
     position: relative;
     height: 85vh;
     display: none;
-    top: 180px;
+    top: 130px;
     left: 0;
     right: 0;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch; }
     .gamePage .optionsContainer {
       width: 100%; }
+    .gamePage h2 {
+      font-size: 18px;
+      font-size: 1.8rem;
+      font-family: 'Bungee Shade', cursive;
+      margin-top: 30px; }
+    .gamePage h3 {
+      font-size: 12.5px;
+      font-size: 1.25rem;
+      font-family: 'Open Sans', sans-serif; }
     .gamePage .option {
-      width: calc(50%);
-      margin: 20px 0; }
-    .gamePage input[type=submit] {
-      width: 50%;
-      margin-top: 18px;
-      margin-left: 15%; }
+      width: calc(33%); }
+    .gamePage #vomitBag {
+      display: none; }
+    .gamePage #submit {
+      width: 100%;
+      margin: 0;
+      text-align: center; }
     .gamePage p {
       font-size: 12.5px;
       font-size: 1.25rem;
       font-family: 'Open Sans', sans-serif;
       text-align: center;
-      font-weight: 600;
       margin: 8px 0; }
-    .gamePage label {
-      display: inline-block;
-      position: relative;
-      cursor: pointer;
-      font-family: sans-serif;
-      font-size: 15px;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none; }
-      .gamePage label:hover .icon:after {
-        color: black;
-        -webkit-transition: all 1s;
-        -o-transition: all 1s;
-        transition: all 1s; }
     .gamePage .icon:after {
       font-size: 30px; }
     .gamePage .resultsContainer {
-      margin: 45px auto;
+      padding-top: 0px;
       text-align: center; }
       .gamePage .resultsContainer h3 {
         font-size: 25px;
         font-size: 2.5rem;
-        font-family: 'Bungee Shade', cursive; } }
+        font-family: 'Bungee Shade', cursive; }
+  footer {
+    display: none; } }

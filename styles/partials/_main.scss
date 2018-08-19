@@ -1,13 +1,12 @@
 // MAIN STYLES
 
-// Home Page styles
+// SECTION 1: Homepage
 .homePage {
-    background: linear-gradient(white, $secondaryColor);
-    border-top: none;
     height: 60vh;
+    background: linear-gradient(white, $secondaryColor);
+    border-top: 2px solid black;
     margin-top: 5px;
     padding-top: 40px;
-    border-top: 2px solid black;
 }
 
 .instructionsContainer {
@@ -15,7 +14,6 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
-
 
 .instructions {
     display: flex;
@@ -28,14 +26,25 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    h2 {
+        padding-right: 10px;
+        padding-top: 5px;
+    }
 }
 
-h3 {
-    padding-right: 10px;
-    padding-top: 5px;
+#vomitIcon {
+    width: 65px;
+    height: 65px;
+    margin: 10px 0 5px 0;   
+}
 
-    .break {
-        display: table;
+.instructionsText {
+    p {
+        @include secondaryFont(13.5);
+        line-height: 1.5;
+        text-align: left;
+        font-weight: 400;
     }
 }
 
@@ -44,14 +53,8 @@ h3 {
     font-style: italic;
 }
 
-
-#vomitIcon {
-    width: 65px;
-    height: 65px;
-    margin: 10px 0 5px 0;   
-}
-
-.headerBtns {
+// Homepage buttons
+.homeBtns {
     width: calc(50% - 25px);
     margin-top: 35px;
     display: flex;
@@ -62,32 +65,24 @@ h3 {
 
 #guideBtn,
 .gameBtns {
-    width: 50%;
-    height: 80px;
     margin: 12.5px;
     position: relative;
 	top: 0;
     left: 0;
-    transition: all 1s;
 }
 
 #gameBtn2 {
-    display: none;
-}
-
-#guideBtn:active,
-.gameBtns {
-    transition: all 1s;
+    display: none; // hidden until 480px screen
 }
 
 #guideBtn {
-    color: deeppink;
-    background: #FFDAB9;
-    border: 1px solid #FFDAB9;
-    box-shadow: -1px 1px 0px pink, -2px 2px 0px pink, -3px 3px 0px pink, -4px 4px 0px pink, -5px 5px 0px pink, -6px 6px 0px pink, -7px 7px 0px pink, -8px 8px 0px pink, -9px 9px 0px pink, -10px 10px 0px pink, 0px 0px 10px rgba(0,0,0,0.4);
+    color: $accentColor;
+    background: $fourthColor;
+    border: 1px solid $fourthColor;
+    box-shadow: -1px 1px 0px $thirdColor, -2px 2px 0px $thirdColor, -3px 3px 0px $thirdColor, -4px 4px 0px $thirdColor, -5px 5px 0px $thirdColor, -6px 6px 0px $thirdColor, -7px 7px 0px $thirdColor, -8px 8px 0px $thirdColor, -9px 9px 0px $thirdColor, -10px 10px 0px $thirdColor, 0px 0px 10px rgba(0,0,0,0.4);
 
     &:hover {
-        box-shadow: -1px 1px 0px darken(pink, 10), -2px 2px 0px darken(pink, 10), -3px 3px 0px darken(pink, 10), -4px 4px 0px darken(pink, 10), -5px 5px 0px darken(pink, 10), -6px 6px 0px darken(pink, 10), -7px 7px 0px darken(pink, 10), -8px 8px 0px darken(pink, 10), -5px 5px 0px darken(pink, 10), -5px 5px 0px darken(pink, 10), 0px 0px 10px rgba(0,0,0,0.4);
+        box-shadow: -1px 1px 0px darken($thirdColor, 10), -2px 2px 0px darken($thirdColor, 10), -3px 3px 0px darken($thirdColor, 10), -4px 4px 0px darken($thirdColor, 10), -5px 5px 0px darken($thirdColor, 10), -6px 6px 0px darken($thirdColor, 10), -7px 7px 0px darken($thirdColor, 10), -8px 8px 0px darken($thirdColor, 10), -5px 5px 0px darken($thirdColor, 10), -5px 5px 0px darken($thirdColor, 10), 0px 0px 10px rgba(0,0,0,0.4);
         top: 5px;
         background: darken($fourthColor, 10);
         border: 1px solid darken($fourthColor, 10);
@@ -95,46 +90,43 @@ h3 {
 }
 
 .gameBtns {
-    color: #FFDAB9;
-    background: hotpink;
-    border: 1px solid hotpink;
-    box-shadow: -1px 1px 0px deeppink, -2px 2px 0px deeppink, -3px 3px 0px deeppink, -4px 4px 0px deeppink, -5px 5px 0px deeppink, -6px 6px 0px deeppink, -7px 7px 0px deeppink, -8px 8px 0px deeppink, -9px 9px 0px deeppink, -10px 10px 0px deeppink, 0px 0px 10px rgba(0,0,0,0.4);
+    color: $fourthColor;
+    background: $primaryColor;
+    border: 1px solid $primaryColor;
+    box-shadow: -1px 1px 0px $accentColor, -2px 2px 0px $accentColor, -3px 3px 0px $accentColor, -4px 4px 0px $accentColor, -5px 5px 0px $accentColor, -6px 6px 0px $accentColor, -7px 7px 0px $accentColor, -8px 8px 0px $accentColor, -9px 9px 0px $accentColor, -10px 10px 0px $accentColor, 0px 0px 10px rgba(0,0,0,0.4);
 
     &:hover {
-       box-shadow: -1px 1px 0px darken(deeppink, 10), -2px 2px 0px darken(deeppink, 10), -3px 3px 0px darken(deeppink, 10), -4px 4px 0px darken(deeppink, 10), -5px 5px 0px darken(deeppink, 10), -6px 6px 0px darken(deeppink, 10), -7px 7px 0px darken(deeppink, 10), -8px 8px 0px darken(deeppink, 10), -5px 5px 0px darken(pink, 10), -5px 5px 0px darken(deeppink, 10), 0px 0px 10px rgba(0,0,0,0.4);
+       box-shadow: -1px 1px 0px darken($accentColor, 10), -2px 2px 0px darken($accentColor, 10), -3px 3px 0px darken($accentColor, 10), -4px 4px 0px darken($accentColor, 10), -5px 5px 0px darken($accentColor, 10), -6px 6px 0px darken($accentColor, 10), -7px 7px 0px darken($accentColor, 10), -8px 8px 0px darken($accentColor, 10), -5px 5px 0px darken(pink, 10), -5px 5px 0px darken($accentColor, 10), 0px 0px 10px rgba(0,0,0,0.4);
         top: 5px;
         background: darken($primaryColor, 10);
         border: 1px solid darken($primaryColor, 10);
     }
 }
-
-#stars {
-    width: 125px;
-    height: 125px;
-    position: absolute;
-    right: 35px;
-    bottom: -25px;
-}
+// end of SECTION 1: Homepage
 
 
-// end of Home Page
-
-
-// Game Page
+// SECTION 2: Gamepage
 .gamePage {
     background: linear-gradient($secondaryColor, white);
     min-height: 90vh;
-    padding-bottom: 1px;
-}
+    padding: 1px 0;
 
-h2 {
-    @include primaryFont(22.5);
-    margin-top: 60px;
-}
+    h2 {
+        margin-top: 60px;
+        @include primaryFont(25);
+    }
 
-.gamePage h3 {
-    @include secondaryFont(15);
-    font-weight: 400;
+    h3 {
+        @include secondaryFont(15);
+        font-weight: 400;
+    }
+
+    p {
+        @include secondaryFont(11.5);
+        text-align: center;
+        font-weight: 600;
+        margin: 8px 0;
+    }
 }
 
 .questionForm {
@@ -152,7 +144,7 @@ h2 {
 }
 
 .option {
-    width: calc(50%);
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,52 +165,43 @@ h2 {
     height: 50px;
 }
 
-input[type=submit] {
+#submit {
     @include secondaryFont(12);
     font-weight: 600;
     text-transform: uppercase;
     width: 60%;
     margin: 25px;
     padding: 25px 0;
-    color: #FFDAB9;
+    color: $fourthColor;
     position: relative;
 	top: 0;
     left: 0;
     transition: all 1s;
-    background: hotpink;
-    border: 1px solid hotpink;
-    box-shadow: -1px 1px 0px deeppink, -2px 2px 0px deeppink, -3px 3px 0px deeppink, -4px 4px 0px deeppink, -5px 5px 0px deeppink, -6px 6px 0px deeppink, -7px 7px 0px deeppink, -8px 8px 0px deeppink, -9px 9px 0px deeppink, -10px 10px 0px deeppink, 0px 0px 10px rgba(0,0,0,0.4);
+    background: $primaryColor;
+    border: 1px solid $primaryColor;
+    box-shadow: -1px 1px 0px $accentColor, -2px 2px 0px $accentColor, -3px 3px 0px $accentColor, -4px 4px 0px $accentColor, -5px 5px 0px $accentColor, -6px 6px 0px $accentColor, -7px 7px 0px $accentColor, -8px 8px 0px $accentColor, -9px 9px 0px $accentColor, -10px 10px 0px $accentColor, 0px 0px 10px rgba(0,0,0,0.4);
 
     &:hover {
-        box-shadow: -1px 1px 0px darken(deeppink, 10), -2px 2px 0px darken(deeppink, 10), -3px 3px 0px darken(deeppink, 10), -4px 4px 0px darken(deeppink, 10), -5px 5px 0px darken(deeppink, 10), -6px 6px 0px darken(deeppink, 10), -7px 7px 0px darken(deeppink, 10), -8px 8px 0px darken(deeppink, 10), -5px 5px 0px darken(pink, 10), -5px 5px 0px darken(deeppink, 10), 0px 0px 10px rgba(0,0,0,0.4);
+        box-shadow: -1px 1px 0px darken($accentColor, 10), -2px 2px 0px darken($accentColor, 10), -3px 3px 0px darken($accentColor, 10), -4px 4px 0px darken($accentColor, 10), -5px 5px 0px darken($accentColor, 10), -6px 6px 0px darken($accentColor, 10), -7px 7px 0px darken($accentColor, 10), -8px 8px 0px darken($accentColor, 10), -5px 5px 0px darken(pink, 10), -5px 5px 0px darken($accentColor, 10), 0px 0px 10px rgba(0,0,0,0.4);
         top: 5px;
         background: darken($primaryColor, 10);
         border: 1px solid darken($primaryColor, 10);
     }
 }
 
-.gamePage p {
-    @include secondaryFont(11.5);
-    text-align: center;
-    font-weight: 600;
-    margin: 8px 0;
-}
-
 input[type="radio"] {
     opacity: 0;
-}
 
-input[type="radio"]:checked + .icon:after {
-    color: black;
+    &:checked + .icon:after {
+        color: black;
+    }
 }
 
 label {
     display: inline-block;
     position: relative;
     cursor: pointer;
-    font-family: sans-serif;
     font-size: 15px;
-    user-select: none;
 
     &:hover .icon:after {
         color: black;
@@ -234,7 +217,7 @@ label {
     left: 0;
     right: 0;
     top: 0;
-    color: pink;
+    color: $thirdColor;
 }
 
 .icon1:after {
@@ -273,7 +256,6 @@ label {
         line-height: 1.5;
     }
 }
-    
-// end of Game Page
+// end of SECTION 2: Gamepage
 
 

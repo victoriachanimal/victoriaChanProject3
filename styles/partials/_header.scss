@@ -1,12 +1,13 @@
 // HEADER STYLES
+
 header {
     height: 40vh;
 }
 
 .logoBackground {
+    height: 260px;
     background: linear-gradient( $accentColor, $primaryColor);
     padding: 20px 0;
-    height: 260px;
 }
 
 .headerLogo {
@@ -28,10 +29,6 @@ h1 {
     position: absolute;
     z-index: 10;
     top: 0;
-
-    .break {
-        display: table;
-    }
 }
 // END OF HEADER STYLES
 

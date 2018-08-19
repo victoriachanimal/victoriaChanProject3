@@ -8,14 +8,14 @@
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Link to Google Fonts -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Open+Sans:400,600" rel="stylesheet">
 
-    <!-- Link to Font Awesome -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
 
-    <!-- External CSS stylesheet -->
+    <!-- CSS stylesheet -->
     <link rel="stylesheet" href="styles/style.css">
 
     <!-- Webpage title -->
@@ -26,8 +26,8 @@
     <!-- HEADER -->
     <header>
         <div class="logoBackground">
+            <!-- Header Logo -->
             <div class="headerLogo wrapper">
-                <!-- Header Logo -->
                 <?xml version="1.0" encoding="iso-8859-1"?>
                 <svg id="hotMessLogo" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -91,24 +91,24 @@
                         c4.625,3.051,9.643,5.501,14.92,7.302c42.209,13.46,48.393,76.009,72.677,65.239c12.57-5.575,16.688-36.539,17.004-68.739
                         C416.073,122.02,423.77,105.837,420.428,89.319z" />
                 </svg>
-                <!-- Header Logo ends -->
                 <h1>Hot<span class="break">Mess</span> Express</h1>
             </div>
+            <!-- Header Logo ends -->
         </div>
     </header>
     <!-- HEADER ENDS -->
 
 
-    <!-- MAIN (2 Sections: Home Page + Game Page) -->
+    <!-- MAIN (2 Sections: Homepage + Gampage) -->
     <main>
-
-        <!-- SECTION 1: HOME PAGE SECTION -->
-        <section class="homePage show hide">
-            <!-- instructions container -->
+        <!-- SECTION 1: HOMEPAGE SECTION -->
+        <section class="homePage" id="homePage">
+           
             <div class="instructionsContainer wrapper">
+                <!-- Instructions -->
                 <div class="instructions">
                     <div class="instructionsTitle">
-                        <h3>How to Play</h3>
+                        <h2>How to Play</h2>
                         <?xml version="1.0" encoding="iso-8859-1"?>
                         <svg id="vomitIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
                             viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512px" height="512px">
@@ -167,46 +167,46 @@
                                 </g>
                             </g>
                         </svg>
-                        
-                    </div>
-                    
+                    </div> 
                     <div class="instructionsText">
-                        <p><span class="highlight">You were wild last night.</span> Now you have to deal with the consequences. <span class="highlight">Hot Mess Express</span> will you give some tough love on how to get through this hell you created. Now get yourself together.</p>
-                        <!-- <p>Refer to our <span class="highlight">handy hangover guide</span> to determine how much of a hot mess you are.</p> -->
+                        <p><span class="highlight">You were wild last night.</span> Now you have to deal with the consequences. <span class="highlight">Hot Mess Express</span> is here to you give you some tough love on how to get through this special circle of hell you created. It's time to get yourself together.</p>
                         <p id="disclaimer"><span class="highlight">*Disclaimer:</span> Advice includes tried and tested methods by Victoria Chan. Quality of life not guaranteed.</p>
                     </div>
                 </div>
-                <!-- homepage buttons -->
-                <div class="headerBtns">
-                    <!-- hangover guide button -->
+                <!-- Instructions End -->
+
+                <!-- Homepage Buttons -->
+                <div class="homeBtns">
+                    <!-- guide button -->
                     <button id="guideBtn">
-                        <p>Handy Hangover Guide</p>
+                        <p>Hangover Guide</p>
                     </button>
-                    <!-- start game button -->
+                    <!-- game button 1 (displayed in wide screen) -->
                     <button id="gameBtn1" class="gameBtns">
                         <p>All Aboard!</p>
                     </button>
+                    <!-- game button 2 (displayed in small screen) -->
                     <button id="gameBtn2" class="gameBtns">
                         <p>All Aboard!</p>
                     </button>
                 </div>
             </div>
-            <!-- end of instructions container -->
         </section>
-        <!-- END OF SECTION 1: HOME PAGE -->
+        <!-- END OF SECTION 1: HOMEPAGE -->
 
-        <!-- SECTION 2: GAME PAGE -->
+        
+        <!-- SECTION 2: GAMEPAGE -->
         <section class="gamePage" id="gamePage">
             <div class="wrapper">
                 <h2>On a scale of 1 to 5 ...</h2>
                 <h3>How bad is your hangover?</h3>
-                
+
                 <!-- Question Form -->
                 <form class="questionForm">
                     <!-- Level 1 Hangover -->
                     <div class="optionsContainer">
-                        <div class="option">
-                            <p>1: The Pardon</p>
+                        <div class="option option1">
+                            <p>1. The Pardon</p>
                             <label for="option1">
                                 <input type="radio" id="option1" name="option" value="hangover1">
                                 <span class="icon icon1"></span>
@@ -214,8 +214,8 @@
                         </div>
 
                         <!-- Level 2 Hangover -->
-                        <div class="option">
-                            <p>2: Wine Flu</p>
+                        <div class="option option2">
+                            <p>2. Wine Flu</p>
                             <label for="option2">
                                 <input type="radio" id="option2" class="test" name="option" value="hangover2">
                                 <span class="icon icon2"></span>
@@ -223,7 +223,7 @@
                         </div>
 
                         <!-- Level 3 Hangover-->
-                        <div class="option">
+                        <div class="option option3">
                             <p>3. Shame Spiral</p>
                             <label for="option3">
                                 <input type="radio" id="option3" name="option" value="hangover3">
@@ -233,7 +233,7 @@
 
                         <!-- Level 4 Hangover -->
                         <div class="option option4">
-                            <p>4: Edge of Death</p>
+                            <p>4. Edge of Death</p>
                             <label for="option4">
                                 <input type="radio" id="option4" name="option" value="hangover4">
                                 <span class="icon icon4"></span>
@@ -242,7 +242,7 @@
 
                         <!-- Level 5 Hangover -->
                         <div class="option option5">
-                            <p>5: Total Trainwreck</p>
+                            <p>5. *Total Trainwreck*</p>
                             <label for="option5">
                                 <input type="radio" id="option5" name="option" value="hangover5">
                                 <span class="icon icon5"></span>
@@ -253,7 +253,6 @@
                     <!-- Submit Results Button -->
                     <div class="submitForm">
                         <?xml version="1.0" encoding="iso-8859-1"?>
-                        <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                         <svg id="vomitBag" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 512.01 512.01" style="enable-background:new 0 0 512.01 512.01;" xml:space="preserve">
                         <g>
@@ -416,58 +415,86 @@
                             </g>
                         </g>
                     </svg>
+                    <!-- Submit Button -->
                     <label class="visuallyHidden" for="submit">Help Me</label>
                     <input type="submit" id="submit" name="submit" value="Help me">
                 </div>
-                
             </form>
             <!-- End of Question Form -->
             
-            <!-- Results -->
+            <!-- Results (generated via Script.js) -->
             <div class="resultsContainer">
                 <div class="results">
-                    <div class="titleResult">
-                
-                        </div>
-                        <div class="textResult" id="results">
-                
-                        </div>
+                    <div class="titleResult"></div>
+                        <div class="textResult" id="results"></div>
                     </div>
                 </div>
                 <!-- End of Results -->
             </div>
         </section>
         <!-- END OF SECTION 2: GAME PAGE -->
-
     </main>
     <!-- END OF MAIN -->
 
-    <!-- ASIDE (1 Section: Hangover Guide Page) -->
+
+    <!-- ASIDE (1 Section: Hangover Guidepage) -->
     <aside>
-        <section class="guidePage show hide">
-            
+        <!-- SECTION 3: GUIDEPAGE STARTS -->
+        <section class="guidePage" id="guidePage">
+            <div class="guideHeading">
+                <h3>The 5 Levels of a Hangover</h3>
+                <i class="fas fa-skull"></i>
+                <button id="exitBtn">
+                    <i class="far fa-times-circle"></i>
+                </button>
+            </div>
+
+            <div class="guideContent wrapper">
+                <div class="level">
+                    <h4><span class="number">1.</span> The Pardon</h4>
+                    <p>No physical pain, a touch of smugness, mild to little headache. Hungry as hell.</p>
+                </div>
+
+                <div class="level">
+                    <h4><span class="number">2.</span> Wine Flu</h4>
+                    <p>Mild nausea, mental and physical slowness, general irritability with immediate friends and family.</p>
+                </div>
+
+                <div class="level">
+                    <h4><span class="number">3.</span> Shame Spiral</h4>
+                    <p>Otherwise known as "hangxiety" - involves a sense of paranoia and guilt over possible things said and done the night before, coupled with a questionable stomach.</p>
+                </div>
+
+                <div class="level">
+                    <h4><span class="number">4.</span> Edge of Death</h4>
+                    <p>You're starving but afraid to eat, and rotate between light sobbing, hot and cold sweats, and dizziness.</p>
+                </div>
+                    
+                <div class="level">
+                    <h4><span class="number">5.</span> Total Trainwreck*</h4>
+                    <p>The apocalypse. Consists of the "holy trinity" - extreme headaches, vomiting and diarrhea. Add in full memory loss, an empty wallet, and an existential crisis.</p>
+                </div>
+            </div>
          </section>
+         <!-- END OF SECTION 3: GUIDEPAGE -->
     </aside>
     <!-- END OF ASIDE -->
 
+
     <!-- FOOTER STARTS -->
     <footer>
-        <p>Some kind of thank you, context...</p>
+        <div class="footerText wrapper">
+            <p>&copy; Hot Mess Express</p>
+            <p>Icons courtesy of Font Awesome & Flaticon.</p>
+        </div>
     </footer>
     <!-- END OF FOOTER -->
 
     <!-- jQuery-->
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
 
-    <!-- JavaScript file -->
+    <!-- JavaScript -->
     <script src="script.js"></script>
 
 </body>
 </html>
-
-<!-- <div>Icons made by
-    <a href="http://www.freepik.com" title="Freepik">Freepik</a> from
-    <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
-    <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
-        target="_blank">CC 3.0 BY</a>
-</div> -->

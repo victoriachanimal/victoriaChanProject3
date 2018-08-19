@@ -5,9 +5,27 @@ footer {
     left: 0;
     bottom: 0;
     height: 10vh;
-    background: linear-gradient($primaryColor,$accentColor);
+    background: linear-gradient($primaryColor, #f470b2);
     padding-bottom: 1px;
     border-top: 2px solid black;
+
+    .footerText {
+        padding-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    p:first-child {
+        @include primaryFont(15);
+    }
+
+    p:last-child {
+        @include secondaryFont(12);
+    }
 }
+
+
 
 // END OF FOOTER STYLES

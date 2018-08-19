@@ -3,7 +3,7 @@ const hangoverLevels = {
     hangover1: [
         {
             title: `Be Basic, Be Traditional`,
-            text: `Aspirin, water and a cat nap, obviously.`
+            text: `Aspirin, bottle of water and a cat nap, obviously.`
         },
 
         {
@@ -22,12 +22,12 @@ const hangoverLevels = {
         },
 
         {
-            title: ``,
-            text: ``
+            title: `Have 'no regratts'`,
+            text: `I mean...That's what your newest tattoo says...`
         },
 
     ],
-    // End of Level 1 Hangover
+   
     // Level 2 Hangover
     hangover2: [
         {
@@ -36,31 +36,31 @@ const hangoverLevels = {
         },
 
         {
-            title: `Sweat it out, Jane Fonda style`,
-            text: `Get moving with an iconic staple from the star's 1982 low impact aerobic workout video, available for $65 on Amazon.`
+            title: `Get intoxicated with...water`,
+            text: `Guzzle 2-3 litres of water and avoid drowning yourself with over consumption.`
         },
 
         {
             title: `A fast-paced, 10-mile Run (or stumble) of Shame`,
-            text: `You did this to yourself. Now grab your Nikes, a bucket, and pray you don't vomit on any innocent bystanders.`
+            text: `Go running, just like you tried to do last night when you ran away from your problems. Grab your Nikes, a bucket, and pray you don't vomit on any innocent bystanders.`
         },
 
         {
-            title: `Have 'no regratts'`,
-            text: `I mean...That's what your newest tattoo says...`
+            title: `Sweat it out`,
+            text: `Purchase some high absorbing paper towel, and begin by wiping that layer of booze sweats coming out of each pore of your body. Then wrap it some around yourself like a mummy.`           
         },
 
         {
-            title: `So Yesterday`,
-            text: `Write yourself a letter the day before, reassuring yourself that you will get through the mass inconveniences and problems you are created for yourself today.`
+            title: `Futureproof`,
+            text: `Write a letter to yourself for the next time you end up in the same position (because you know you will). Reassure future You that you will get through the mass inconveniences and problems you created for yourself today.`
         }
     ],
-    // End of Level 2 Hangover
+   
     // Level 3 Hangover
     hangover3: [
         {
             title: `Liquid Jell-O`,
-            text: `Submerge a pack of Jell-O in hot water, mix it up and sip on it. This creative concoction will restore your body's electrolytes and stay in your stomach, especially if you'll have trouble keeping anything beyond liquids down.`
+            text: `Submerge a pack of Jell-O in hot water, mix it all up and sip on it. This creative concoction will restore your body's electrolytes and stay in your stomach, especially if you'll have trouble keeping anything beyond liquids down.`
         },
 
         {
@@ -70,20 +70,20 @@ const hangoverLevels = {
 
         {
             title: `Bull's Eye`,
-            text: `Fix yourself a glass of orange juice, with a raw organic egg inside. If my 81-year-old grandfather can chug that every Sunday before Church, so can you.`
+            text: `Fix yourself a glass of orange juice, with a raw organic egg inside.`
         },
 
         {
-            title: `A Slap in the Face`,
-            text: `Wake up and stop feeling sorry for yourself. It could be worse.`
+            title: `Get slapped in the face`,
+            text: `You're probably not a joy to be around right now, which will come in handy when you're taunting potential victims to slap you out of your misery. If a friend or loved one isn't around, aim for someone within 20 meters of your home.`
         },
 
         {
             title: `Cheer Up`,
-            text: `You hate everyone, and the thought of that annoys you even more. Shift your focus by decorating your ceiling fan with Christmas lights and staring at it.`
+            text: `You hate everyone today, and the thought of happy, non-hungover people going to get brunch with more people annoys you even more. Shift your focus by decorating your ceiling fan with Christmas lights and staring at it.`
         },
     ],
-    // End of Level 3 Hangover
+  
     // Level 4 Hangover
     hangover4: [
         {
@@ -111,7 +111,7 @@ const hangoverLevels = {
             text: `If available, shove some snow in your mouth. Better yet, make your own snowcone - the subtle crunch will satisfy your hunger, and the cool water will hydrate you.`
         },
     ],
-    // End of Level 4 Hangover
+  
     // Level 5 Hangover
     hangover5: [
         {
@@ -140,23 +140,9 @@ const hangoverLevels = {
         },
     ],
     // End of Level 5 Hangover
-
 };
 
-// ROADMAP SUMMARY:
-// Create a namespace
-// When the form submits... 
-// Prevent default
-// Listen to which input user selects
-// Match user's choice to the hangover option
-    // get value of title 
-    // get value of advice 
-// Make user select only one option 
-// Create a function that randomizes objects in a given option array and selects only one 
-// Put hangover advice on page
-// Make sure that once the user selects and submits their choice, that the next hangover advice REPLACES the previous one (ie empty?) 
 
-// DOC READY STARTS
 // *Create a namespace
 const hangoverApp = {};
 
@@ -166,6 +152,7 @@ const randomResult = (array) => {
     return array[randomAdvice];
 }
 
+// Create a function that scrolls down when user clicks on #gameBtn1 on the wide screen
 hangoverApp.startWideScreen = function() {
     $('#gameBtn1').on('click', function(event) {
         // Prevent default
@@ -178,7 +165,51 @@ hangoverApp.startWideScreen = function() {
     });
 };
 
-// Put submit event listener in the hangoverApp object
+// Global variables for 3 pages
+const homePage = document.getElementsByClassName('homePage');
+
+const gamePage = document.getElementsByClassName('gamePage');
+
+const guidePage = document.getElementsByClassName('guidePage');
+
+// Function to open and close guidepage 
+function openGuide() {
+    document.getElementById('guidePage').style.height = "100%";
+}
+
+function closeGuide() {
+    document.getElementById('guidePage').style.height = "0%";
+}
+
+// 1. When user clicks on certain buttons, show a page but hide the other 2
+hangoverApp.pages = function () {
+   
+    // When user clicks on #guideBtn, CALL above openGuide() function
+    $('#guideBtn').on('click', function (event) {
+
+        // Prevent default
+        event.preventDefault();
+
+        openGuide();
+    });
+
+    // When user clicks on #exitBtn, CALL above closeGuide() function
+    $('#exitBtn').on('click', function(event) {
+        // Prevent default
+        event.preventDefault();
+
+        closeGuide();
+    });
+
+    // When user clicks on #gameBtn2, show Gamepage but hide other 2 pages
+    $('#gameBtn2').on('click', function () {
+        $('.gamePage').show();
+        $('.homePage').hide();
+        $('.guidePage').hide();
+    });
+};
+
+// Put "submit event" listener from Gamepage in the hangoverApp object
 hangoverApp.submitChoice = function() {
     // When the form submits (event listener)...
     $('form').on('submit', function (event) {
@@ -199,14 +230,7 @@ hangoverApp.submitChoice = function() {
         // Create title variable 
         const hangoverResult = randomResult(hangoverAdvice);
 
-        console.log(hangoverResult.title);
-
-        // Create an advice variable
-        console.log(hangoverResult.text);
-
-
-        // Put hangover advice on page
-        // Make sure that once the user selects and submits their choice, that the next hangover advice REPLACES the previous one (ie empty?)
+        // Put result on page
         const titleResult = `<h3>${hangoverResult.title}</h3>`
 
         $('.titleResult').html(titleResult);
@@ -216,45 +240,7 @@ hangoverApp.submitChoice = function() {
         $('.textResult').html(textResult);
 
     });
-    // End of form submit (event listener)
 };
-
-// Show and Hide homePage, gamePage, guidePage
-// Navigating through pages like an app 
-// Homepage (title page)
-// How to play (slide in)
-// Actual game page 
-
-const homePage = document.getElementsByClassName('homePage');
-
-const gamePage = document.getElementsByClassName('gamePage');
-
-const guidePage = document.getElementsByClassName('guidePage');
-
-// 1. When one clicks on guideBtn, show guidePage but hide homePage and gamePage
-hangoverApp.pages = function() {
-    
-    $('#guideBtn').on('click', function() {
-        $('.homePage').hide();
-    });
-
-    $('#gameBtn2').on('click', function() {
-        $('.homePage').hide();
-        $('.guidePage').hide();
-        $('.gamePage').show();
-        // stylr original 0 opacity - show with 1
-        // $('.gamePage').css('opacity', '1');
-        // $('.gamePage').addClass('show');
-    });
-
-};
-
-// 2.When one clicks on gameBtn, show gamePage but hide homePage and guidePage
-
-
-// 3. When one clicks on homeBtn, show homePage but hide gamePage and guidePage
-
-
 
 
 // Create an init method on the hangoverApp object, to be called inside the Doc Ready below
@@ -266,9 +252,11 @@ hangoverApp.init = function(){
     hangoverApp.pages();
 };
 
-
+// * DOC READY *
 $(function () {
+
     // Call init function
     hangoverApp.init();
+
 });
-// DOC READY ENDS
+// * DOC READY ENDS *
