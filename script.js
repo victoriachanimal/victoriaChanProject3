@@ -17,8 +17,8 @@ const hangoverLevels = {
         },
 
         {
-            title: `Oxygen Mask`,
-            text: `Fresh air does wonders to a healing body, so why not go for the purest air there is? Pay no attention to the people pointing and laughing at you.`
+            title: `Hair of the Dog`,
+            text: `But actually - shave a dog, preferably one with coarse hair. Then eat its hair.`
         },
 
         {
@@ -31,12 +31,12 @@ const hangoverLevels = {
     // Level 2 Hangover
     hangover2: [
         {
-            title: `Hair of the Dog`,
-            text: `But actually - shave a dog, preferably one with coarse hair. Then eat its hair.`
+            title: `Oxygen Mask`,
+            text: `Fresh air does wonders to a healing body, so why not go for the purest air there is? Pay no attention to the people pointing and laughing at you.`
         },
 
         {
-            title: `Get intoxicated with...water`,
+            title: `Get intoxicated with... water`,
             text: `Guzzle 2-3 litres of water and avoid drowning yourself with over consumption.`
         },
 
@@ -51,7 +51,7 @@ const hangoverLevels = {
         },
 
         {
-            title: `Futureproof`,
+            title: `Future-proof`,
             text: `Write a letter to yourself for the next time you end up in the same position (because you know you will). Reassure future You that you will get through the mass inconveniences and problems you created for yourself today.`
         }
     ],
@@ -131,7 +131,7 @@ const hangoverLevels = {
 
         {
             title: `This is the Apocalypse`,
-            text: `... at least it feels like it. Close your blinds , gather all frozen and non-perishable food items from your kitchen, and recede to the darkest corner of your home.`
+            text: `... at least it feels like it. Close your blinds, gather all frozen and non-perishable food items from your kitchen, and recede to the darkest corner of your home.`
         },
 
         {
@@ -195,6 +195,7 @@ hangoverApp.pages = function () {
 
     // When user clicks on #exitBtn, CALL above closeGuide() function
     $('#exitBtn').on('click', function(event) {
+
         // Prevent default
         event.preventDefault();
 
@@ -203,6 +204,8 @@ hangoverApp.pages = function () {
 
     // When user clicks on #gameBtn2, show Gamepage but hide other 2 pages
     $('#gameBtn2').on('click', function () {
+        
+
         $('.gamePage').show();
         $('.homePage').hide();
         $('.guidePage').hide();
